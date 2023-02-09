@@ -38,7 +38,7 @@ function generatePassword() {
     return "Please try again.\nMake sure to select atleast one of the following character sets:\nlowercase, uppercase, numbers, or special characters.";
   }
 
-  // 3. Generate the password base on criteria
+  // 3. Generate the password based on criteria
   var characters ="";
   if (useLowercase) {
     characters += lowercase;
