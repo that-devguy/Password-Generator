@@ -39,11 +39,26 @@ function generatePassword() {
   }
 
   // 3. Generate the password base on criteria
-
-
+  var characters ="";
+  if (useLowercase) {
+    characters += lowercase;
+  }
+  if (useUppercase) {
+    characters += uppercase;
+  }
+  if (useNumeric) {
+    characters += numeric;
+  }
+  if (useSpecial) {
+    characters += special;
+  }
+  var password ="";
+  for (var i = 0;i < length; i++){
+    password += characters.charAt(Math.floor(Math.random()*characters.length));
+  }
 
   // 4. Display on page
-  return "Generated password will go here!";
+  return password;
 }
 
 // Write password to the #password input
