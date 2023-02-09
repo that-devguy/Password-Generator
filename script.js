@@ -13,8 +13,8 @@ function generatePassword() {
 
   // 1. Prompt the user for password length
   //    a. Password length 8 < 128
-  //    b. Validate the password length
   var length = prompt("Enter the desired password length (8-128 characters): ");
+  //    b. Validate the password length
   if (length < 8) {
     alert("Please enter a password length between 8-128 characters.");
     return "Please try again.";
@@ -25,15 +25,21 @@ function generatePassword() {
   }
 
   // 2. Prompt the user for password criteria
-  //    a. Password must inlude at least 1 of the following: lowercase,     uppercase, number, special characters
-  //    b. Validate password criteria
   var useLowercase = confirm("Click 'OK' to include lowercase letters.");
   var useUppercase = confirm("Click 'OK' to include uppercase letters.");
   var useNumeric = confirm("Click 'OK to include numbers.");
   var useSpecial = confirm("Click 'OK' to include special characters.");
 
+  //    a. Password must inlude at least 1 of the following: lowercase  uppercase, number, special characters
+  //    b. Validate password criteria
+  if (!useLowercase && !useUppercase && !useSpecial && !useNumeric) {
+    alert("At least one of the following character sets must be selected: \nlowercase, uppercase, numbers, or special characters.");
+
+    return "Please try again.\nMake sure to select atleast one of the following character sets:\nlowercase, uppercase, numbers, or special characters.";
+  }
 
   // 3. Generate the password base on criteria
+
 
 
   // 4. Display on page
