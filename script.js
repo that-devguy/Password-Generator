@@ -24,10 +24,16 @@ function generatePassword() {
     return "Please try again.";
   }
 
-
   // 2. Prompt the user for password critia
   //    a. Password must inlude at least 1 of the following: lowercase,     uppercase, number, special characters
   //    b. Validate password critia
+  var useLowercase = confirm("Click 'OK' to include lowercase letters.");
+  var useUppercase = confirm("Click 'OK' to include uppercase letters.");
+  var useNumeric = confirm("Click 'OK to include numbers.");
+  var useSpecial = confirm("Click 'OK' to include special characters.");
+
+
+
   // 3. Generate the password base on criteria
 
 
