@@ -11,9 +11,23 @@ function generatePassword() {
   var numeric = "0123456789";
   var special = "!@#$%^&*()_+-=[]{}|;':<>,.?";
 
-  // 1. Prompt the user for password criteria
+  // 1. Prompt the user for password length
   //    a. Password length 8 < 128
-  // 2. Validate the input
+  //    b. Validate the password length
+  var length = prompt("Enter the desired password length (8-128 characters): ");
+  if (length < 8) {
+    alert("Please enter a password length between 8-128 characters.");
+    return "Please try again.";
+  }
+  if (length > 128) {
+    alert("Please enter a password length between 8-128 characters.");
+    return "Please try again.";
+  }
+
+
+  // 2. Prompt the user for password critia
+  //    a. Password must inlude at least 1 of the following: lowercase,     uppercase, number, special characters
+  //    b. Validate password critia
   // 3. Generate the password base on criteria
 
 
