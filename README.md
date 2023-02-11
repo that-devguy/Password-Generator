@@ -1,4 +1,4 @@
-# Week 3 Challenge - Password-Generator
+# Week 3 Challenge - Password Generator
 
 In this week's Challenge I modified starter code to create an application that enables users to generate random passwords based on criteria that they've selected. This application runs in the browser and features dynamically updated HTML and CSS powered by JavaScript.
 
